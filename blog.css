@@ -1,0 +1,307 @@
+/* Styles go here */
+/*
+    Colors from jumbotron image
+
+    #808e84
+    #8aa28f
+    #9eb59e
+    #a8c3e3
+    #b0cbf6
+    #c2daf4
+    #ecf1f6
+
+    #F3F5F2
+    #69A2F3
+    #78B7F4
+    #8AA32D
+    #C11F23
+
+
+    Other colors
+    #09A2CC
+    #538A99
+    #25FFB6
+    #FF6C64
+    #CC0949
+*/
+
+/*
+ * Globals
+ */
+html , body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #555;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: Georgia, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+/*@media (min-width: 1200px) {
+  .jumbotron {
+    width: 989px;
+
+  }
+}*/
+
+
+/*
+ * Masthead for nav
+ */
+
+
+
+.blog-masthead {
+  background: linear-gradient(to bottom, #ff7256 0%,#FF836D 100%); /* W3C */
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+}
+
+/* Nav links */
+.blog-nav-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+  color: rgba(77, 80, 82, 1);
+  font-size: 17px;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: rgba(209, 209, 209, 1);
+  text-decoration: none;
+}
+
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+    /*Font color*/
+  color: rgba(35, 73, 185, 1);
+}
+.blog-nav .active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  /*margin-left: -5px;*/
+  vertical-align: middle;
+  content: " ";
+  border-right: 5px solid transparent;
+  /*Caret color*/
+  border-bottom: 5px solid; /*rgba(35, 73, 185, 1);*/
+  border-left: 5px solid transparent;
+}
+
+
+/*
+ * Blog name and description
+ */
+.jumbotron {
+    background-image: url('http://i.imgur.com/1c9UTuO.jpg?1');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 30em;
+}
+
+.jumbotron h1 {
+    color: rgba(255, 123, 98, 1);
+}
+
+.blog-header {
+    height: 400px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    /*margin-left: 10em;*/
+}
+.blog-title {
+    margin-bottom: 0;
+    font-weight: normal;
+    font-family: 'Dancing Script' , cursive;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+.blog-description {
+  font-size: 20px;
+  color: #999;
+}
+.blog-post-caption {
+    font-family: 'Dancing Script' , cursive;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+.blog-main {
+  font-size: 18px;
+  line-height: 1.5;
+  float: inherit; /* Charlie added this beep */
+  margin-bottom: 60px;
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  text-align: center;
+  /*margin-left: 15px;
+  margin-right: 15px;*/
+}
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #ffffff;
+  text-align: center;
+}
+.sidebar-module-inset h3 {
+  font-family: Georgia;
+  font-size: 1.4em;
+  color: rgba(43, 39, 39, 0.97);
+}
+.sidebar-blog-box {
+  padding: 15px;
+  background-color: #f5f5f5;
+  text-align: center;
+  border-radius: 5px;
+  /*margin-left: 15px;
+  margin-right: 15px;*/
+  margin-bottom: 60px;
+}
+.sidebar-blog-box h3 {
+  font-family: Georgia;
+  font-size: 1.4em;
+  color: rgba(43, 39, 39, 0.97);
+}
+.sidebar-blog-box h4 {
+  font-family: Georgia;
+  font-size: 1em;
+  color: #999;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+img.resize {
+  max-width: 50%;
+  max-height: 50%;
+}
+/* Pagination */
+.pager {
+  margin-bottom: 60px;
+  text-align: center;
+}
+.pager > li > a {
+  width: 140px;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 5px;
+  /*background: linear-gradient(to bottom, #ff7256 0%,#FF836D 100%);*/
+  background-color: rgba(38, 89, 244, 0.9);
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+.pager > li > a:hover {
+background-color: #FF836D;
+}
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  padding: 10px;
+  margin-bottom: 60px;
+}
+.blog-post-title {
+  margin-bottom: 5px;
+  font-size: 3em;
+  font-family: Georgia;
+  text-align: center;
+
+}
+.blog-post-meta {
+  margin-bottom: 20px;
+  color: #999;
+  text-align: center;
+}
+.blog-post-photo {
+  display: inline-block;
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom:3em;
+}
+.blog-post-photo .resize {
+  max-width: 25%;
+  max-height: 25%;
+}
+.blog-post-photo .resize90 {
+  max-width: 90%;
+  max-height: 90%;
+}
+.blog-post-photo .resize75 {
+  max-width: 75%;
+  max-height: 75%;
+}
+.blog-post-photo .resize50 {
+  max-width: 50%;
+  max-height: 50%;
+}
+.blog-post p {
+  text-align: center;
+}
+#home-page-text {
+    text-align: left;
+    line-height: 45px;
+}
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 40px 0;
+  color: rgba(77, 80, 82, 1);
+  text-align: center;
+  background: linear-gradient(to bottom, #ff7256 0%,#FF836D 100%);
+  border-top: 1px solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Dancing Script'), local('DancingScript'), url(https://fonts.gstatic.com/s/dancingscript/v6/DK0eTGXiZjN6yA8zAEyM2ZsM3FTMmj2kTPH3yX99Yaw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@media screen and (min-width: 1080px) {
+    #blog6pic {
+        margin-left: 7%;
+    }
+}
